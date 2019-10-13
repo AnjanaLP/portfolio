@@ -1,12 +1,15 @@
 Rails.application.routes.draw do
 
+  resources :blogs do
+    member do
+      patch :toggle_status
+    end
+  end
   resources :portfolios
-  get 'pages/home'
 
-  get 'pages/about'
+  get '/home',    to: 'pages#home'
+  get '/about',   to: 'pages#about'
+  get '/contact', to: 'pages#contact'
 
-  get 'pages/contact'
-
-  resources :blogs
   root 'pages#home'
 end
