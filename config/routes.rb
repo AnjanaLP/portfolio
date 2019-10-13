@@ -1,6 +1,10 @@
 Rails.application.routes.draw do
 
-  resources :blogs
+  resources :blogs do
+    member do
+      patch :toggle_status
+    end
+  end
   resources :portfolios
 
   get '/home',    to: 'pages#home'
