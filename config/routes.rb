@@ -6,6 +6,7 @@ Rails.application.routes.draw do
     end
   end
   resources :portfolios
+  get '/angular-items', to: 'portfolio#angular'
 
   get '/home',    to: 'pages#home'
   get '/about',   to: 'pages#about'
