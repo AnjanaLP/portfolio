@@ -13,7 +13,7 @@ Rails.application.routes.draw do
   get '/angular-items', to: 'portfolios#angular'
 
   get '/home',    to: 'pages#home'
-  get '/about',   to: 'pages#about'
+  get '/about-me',   to: 'pages#about'
   get '/contact', to: 'pages#contact'
 
   root 'pages#home'
