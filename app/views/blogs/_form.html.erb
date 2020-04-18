@@ -1,9 +1,5 @@
 <%= form_with(model: blog, local: true) do |form| %>
-  <% if blog.errors.any? %>
-    <% blog.errors.full_messages.each do |error| %>
-      <%= js add_gritter(error, title: "Anjana says...", sticky: false) %>
-    <% end %>
-  <% end %>
+  <%= render 'shared/error_messages', object: form.object %>
 
   <div class="form-group">
     <%= form.label :title %>
