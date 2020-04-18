@@ -18,10 +18,12 @@
             <%= render 'shared/application_nav' %>
 
             <div id="background"></div>
-            
+
             <%= yield %>
 
             <%= render 'shared/application_footer' %>
+
+            <%= render 'shared/alerts' %>
 
             <%= source_helper('application') %>
         </div>
