@@ -2,6 +2,6 @@
   <div class="container">
     <h1 class="blog-title">My Blog</h1>
     <p class="lead blog-description">Read my entries for some of my favourite tips and explorations!</p>
-    <%= link_to 'New Blog', new_blog_path if logged_in?(:site_admin) %>
+    <%= link_to 'Write a new blog', new_blog_path, class: "btn btn-sm btn-primary"  if logged_in?(:site_admin) %>
   </div>
 </div>
