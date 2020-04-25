@@ -17,7 +17,7 @@ module ApplicationHelper
   end
 
   def copyright_converter
-    "&copy;".html_safe + "#{Time.now.year} Anjana Nabhan | All rights reserved"
+    "&copy;".html_safe + "#{Time.now.year} Anjana Pathmanabhan | All rights reserved"
   end
 
   def nav_items
