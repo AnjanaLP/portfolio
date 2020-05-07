@@ -7,4 +7,6 @@ class Blog < ApplicationRecord
   validates_presence_of :title, :body
 
   belongs_to :topic, required: false
+
+  default_scope { order(created_at: :desc) }
 end
