@@ -17,6 +17,9 @@ class BlogsController < ApplicationController
   # GET /blogs/1
   # GET /blogs/1.json
   def show
+    unless logged_in?(:site_admin) || @blog.published?
+      redirect_to blogs_url, notice: "You cannot access draft blogs"
+    end
     @page_title = @blog.title
   end
 
