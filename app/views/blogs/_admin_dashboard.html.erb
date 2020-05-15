@@ -1,0 +1,5 @@
+<p class="blog-post-meta">
+  <%= link_to fa_icon('file-text'), toggle_status_blog_path(blog), method: :patch, class: "btn btn-#{status_colour(blog)}" %>
+  <%= link_to fa_icon('edit'), edit_blog_path(blog), class: "btn btn-primary" %>
+  <%= link_to fa_icon('trash'), blog, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-danger" %>
+</p>
