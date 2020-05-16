@@ -1,9 +1,15 @@
-<div class="masthead clearfix">
-  <div class="inner">
-    <h3 class="masthead-brand">Anjana Pathmanabhan</h3>
-    <nav class="nav nav-masthead app-nav">
-      <%= nav_helper "nav-link", "span" %>
-      <%= login_helper("nav-link") %>
-    </nav>
+<nav class="navbar fixed-top navbar-expand-md navbar-light bg-light">
+  <div class="container">
+    <%= link_to "Anjana Pathmanabhan", root_path, class: 'navbar-brand text-secondary' %>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+     <ul class="navbar-nav ml-auto">
+       <%= nav_helper 'nav-link text-secondary', 'span' %>
+       <%= login_helper 'nav-link text-secondary' %>
+     </ul>
+    </div>
   </div>
-</div>
+</nav>
