@@ -1,16 +1,22 @@
-<div class="row">
-  <div class="col-md-4">
-    <%= image_tag("profile.jpg", width: "200", alt: "Profile Picture") %>
-  </div>
-  <div class="col-md-8">
-    <h1>About me</h1>
-    <br>
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-    Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure
-    dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-    proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
+<div class="card">
+  <div class="card-block">
+    <div class="row">
+      <div class="col-md-3 pages-container">
+        <h1>About Me</h1>
+        <p class="profile-pic"><%= image_tag("profile.jpg", width: "180", alt: "Profile Picture") %></p>
+      </div>
 
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-    Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+      <div class="col-md-9 about-block">
+        <p>As an experienced former Marketing professional working within Telecommunications and Systems Integration,
+        the highlight of my job had always been collaborating with software development teams to ensure front-end
+        and back-end scripts incorporated all marketing requirements with the highest level of accuracy, efficiency
+        and integrity. However, the ability to actually write the code that executed my ideas had always been one of
+        my greatest desires.</p>
+
+        <p>Enrolling in an intensive programming course at Maker’s Academy in London provided the perfect
+        opportunity to fulfil this longstanding aspiration. I've been coding ever since then, harnessing my skills and further
+        advancing my aptitude for software development.</p>
+      </div>
+    </div>
   </div>
 </div>
