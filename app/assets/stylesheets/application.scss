@@ -24,6 +24,9 @@ body {
   color: $gray-600;
   text-align: center;
 }
+p {
+  color: $gray-600;
+}
 
 /* Extra markup and styles for table-esque vertical and horizontal centering */
 .site-wrapper {
@@ -112,7 +115,6 @@ body {
 .mastfoot {
   color: $gray-600;
 }
-
 
 /*
  * Affix and center
@@ -211,4 +213,12 @@ body {
 
 .about-block {
   padding-top: 70px;
+}
+
+.collapse {
+  color: $gray-600;
+}
+
+.btn-secondary {
+  margin-right: 10px;
 }
