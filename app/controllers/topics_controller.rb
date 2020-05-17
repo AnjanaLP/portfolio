@@ -1,8 +1,8 @@
 class TopicsController < ApplicationController
+  before_action :set_topics
   layout 'blog'
 
   def index
-    @topics = Topic.all
   end
 
   def show
@@ -12,5 +12,11 @@ class TopicsController < ApplicationController
     else
       @blogs = @topic.blogs.published.page(params[:page]).per(5)
     end
+  end
+
+  private
+
+  def set_topics
+    @topics = Topic.all
   end
 end

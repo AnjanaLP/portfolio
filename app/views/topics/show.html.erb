@@ -1,9 +1,15 @@
 <div class="col-sm-8 blog-main">
   <h1><%= @topic.title %></h1>
-  <hr>
-  <%= paginate @blogs %>
 
-  <%= render @blogs %>
+  <div class="blog-list">
+    <% if @blogs.empty? %>
+      <p>No blogs for this topic yet! Check back soon!</p>
+    <% end %>
 
-  <%= paginate @blogs %>
+    <%= paginate @blogs %>
+
+    <%= render @blogs %>
+
+    <%= paginate @blogs %>
+  </div>
 </div>
