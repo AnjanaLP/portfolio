@@ -7,4 +7,8 @@ class Skill < ApplicationRecord
   def set_defaults
     self.badge ||= Placeholder.image_generator(height: '250', width: '250')
   end
+
+  def self.by_position
+    order(percent_utilised: :asc)
+  end
 end

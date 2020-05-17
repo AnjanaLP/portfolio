@@ -4,6 +4,21 @@
       <div class="col-md-3 pages-container">
         <h1>About Me</h1>
         <p class="profile-pic"><%= image_tag("profile.jpg", width: "180", alt: "Profile Picture") %></p>
+
+        <div class="skills">
+          <% @skills.each do |skill| %>
+              <h6><%= skill.title %></h6>
+              <div class="progress">
+                <div
+                  class="progress-bar progress-bar-striped bg-dark"
+                  role="progressbar"
+                  aria-valuenow="<%= skill.percent_utilised %>"
+                  aria-valuemax="100"
+                  style="width: <%= skill.percent_utilised %>%"
+                ></div>
+              </div>
+          <% end %>
+        </div>
       </div>
 
       <div class="col-md-9 about-block">
@@ -18,16 +33,16 @@
         advancing my aptitude for software development.</p>
 
         <p>
-          <button class="btn btn-secondary" data-toggle="collapse" href="#skills" role="button" aria-expanded="false" aria-controls="skills">
+          <button class="btn btn-secondary cv-btn" data-toggle="collapse" href="#skills" role="button" aria-expanded="false" aria-controls="skills">
             Skills
           </button>
-          <button class="btn btn-secondary" type="button" data-toggle="collapse" data-target="#education" aria-expanded="false" aria-controls="education">
+          <button class="btn btn-secondary cv-btn" type="button" data-toggle="collapse" data-target="#education" aria-expanded="false" aria-controls="education">
             Education
           </button>
-          <button class="btn btn-secondary" type="button" data-toggle="collapse" data-target="#experience" aria-expanded="false" aria-controls="experience">
+          <button class="btn btn-secondary cv-btn" type="button" data-toggle="collapse" data-target="#experience" aria-expanded="false" aria-controls="experience">
             Experience
           </button>
-          <button class="btn btn-secondary" type="button" data-toggle="collapse" data-target="#interests" aria-expanded="false" aria-controls="interests">
+          <button class="btn btn-secondary cv-btn" type="button" data-toggle="collapse" data-target="#interests" aria-expanded="false" aria-controls="interests">
             Interests
           </button>
         </p>
