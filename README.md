@@ -2,8 +2,9 @@
 
 ## Key Features
 
-- change slugs to have friendly routes for blog posts to improve SEO
+- custom routes and friendly slugs for blog posts
 - enum and toggle button to change the state of a blog from draft to published
+- model validations and associations
 - custom scopes to have database queries in the model and keep controllers 'skinny'
 - optimise database query performance using includes method
 - nested attributes to add technologies through its parent, a portfolio item
@@ -19,4 +20,5 @@
 - custom styled alert notifications (via Gritter gem)
 - admin drag and drop functionality for portfolio items (jquery ui and sortable html5)
 - breadcrumbs and admin dashboard in blog posts
+- integrate markdown for portfolio items' descriptions
 - deployment to Heroku
