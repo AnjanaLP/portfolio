@@ -5,24 +5,24 @@
     </div>
     <div class="col-md-5">
       <h1><%= @portfolio_item.title %></h1>
+      <% if logged_in?(:site_admin) %>
+        <div class="">
+          <%= link_to "Edit Item", edit_portfolio_path(@portfolio_item), class: 'btn btn-warning btn-sm' %>
+        </div>
+      <% end %>
 
       <a href="<%= @portfolio_item.subtitle %>" class="btn btn-primary github-link" target="blank">Visit the repo on Github</a>
 
-      <p><%= @portfolio_item.body %></p>
-
       <div class="technologies-list">
-        <h3>Technologies Used:</h3>
+        <h3>Technologies Used</h3>
 
         <% @portfolio_item.technologies.each do |t| %>
           <p><%= t.name %></p>
         <% end %>
-
-        <% if logged_in?(:site_admin) %>
-          <div class="">
-            <%= link_to "Edit Item", edit_portfolio_path(@portfolio_item), class: 'btn btn-warning' %>
-          </div>
-        <% end %>
       </div>
+    </div>
+    <div class="col-md-12 body-content">
+      <p><%= markdown @portfolio_item.body %></p>
     </div>
   </div>
 </div>
