@@ -24,30 +24,12 @@
     <% if current_user.is_a? GuestUser %>
       <%= link_to "Login to post a comment", new_user_session_path, class: "btn btn-primary" %>
     <% else %>
-      <div>
-        <%= form_for @comment do |f| %>
-          <div class="form-group">
-
-            <%= f.text_area :content, class: "form-control", placeholder: "Write a comment...", rows: 5 %>
-            <%= f.hidden_field(:blog_id, value: @blog.id) %>
-          </div>
-
-          <div class="form-group">
-            <%= f.submit 'Post comment', class: "btn btn-primary" %>
-          </div>
-        <% end %>
-      </div>
+      <%= render 'comments/form' %>
     <% end %>
   </div>
 
   <% if @blog.comments.any? %>
-    <div>
-      <h5>Comments:</h5>
-        <% @blog.comments.each do |comment| %>
-          <span class="user-icons text-primary"><%= fa_icon "user" %></span>
-          <em>Posted by <%= comment.user.name %> <%= time_ago_in_words(comment.created_at) %> ago</em>
-          <p><%= comment.content %></p><hr>
-        <% end %>
-    </div>
+    <h5>Comments:</h5>
+      <%= render @blog.comments %>
   <% end %>
 </div>

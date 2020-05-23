@@ -1,0 +1,11 @@
+<%= form_for @comment do |f| %>
+  <div class="form-group">
+
+    <%= f.text_area :content, class: "form-control", placeholder: "Write a comment...", rows: 5 %>
+    <%= f.hidden_field(:blog_id, value: @blog.id) %>
+  </div>
+
+  <div class="form-group">
+    <%= f.submit 'Post comment', class: "btn btn-primary" %>
+  </div>
+<% end %>
