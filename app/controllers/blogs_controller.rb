@@ -22,6 +22,7 @@ class BlogsController < ApplicationController
       redirect_to blogs_url, notice: "You cannot access draft blogs"
     end
     @page_title = @blog.title
+    @comment = current_user.comments.build
   end
 
   # GET /blogs/new

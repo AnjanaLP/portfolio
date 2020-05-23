@@ -3,13 +3,15 @@
     <%= link_to blog.title, blog %>
   </h2>
 
-  <p class="blog-post-meta">
-    Published <%= distance_of_time_in_words(blog.created_at, Time.now) %> ago
-  </p>
+    <p class="blog-post-meta">
+      Published <%= distance_of_time_in_words(blog.created_at, Time.now) %> ago
+    </p>
 
-  <%= render partial: 'admin_dashboard', locals: { blog: blog } if logged_in?(:site_admin) %>
-  
-  <p>
-    <%= blog.body %>
-  </p>
+    <%= render partial: 'admin_dashboard', locals: { blog: blog } if logged_in?(:site_admin) %>
+
+    <% if current_page?(blogs_path)%>
+      <p><%= blog.body.truncate_words(20) %> <%=link_to "continue reading", blog %></p>
+    <% else %>
+      <p><%= blog.body %></p>
+    <% end %>
 </div>
